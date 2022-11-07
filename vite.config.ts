@@ -13,6 +13,8 @@ export default defineConfig({
     }),
     checker({ typescript: true }),
   ],
+  base:
+    process.env.NODE_ENV === "production" ? "/spl3-udemae-simulator/" : "./",
   server: {
     port: 3000,
   },
