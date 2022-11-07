@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import solidPlugin from "vite-plugin-solid";
 import WindiCSS from "vite-plugin-windicss";
 import checker from "vite-plugin-checker";
+import { resolve } from "path";
 
 export default defineConfig({
   plugins: [
@@ -19,5 +20,11 @@ export default defineConfig({
   },
   build: {
     target: "esnext",
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        404: resolve(__dirname, "404.html"),
+      },
+    },
   },
 });
