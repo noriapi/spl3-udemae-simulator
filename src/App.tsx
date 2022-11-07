@@ -1,5 +1,5 @@
 import type { Component } from "solid-js";
-import { Routes, Route, A } from "@solidjs/router";
+import { Routes, Route } from "@solidjs/router";
 import Simple from "./pages/simple";
 import Advance from "./pages/advance";
 import Header from "./components/Header";
