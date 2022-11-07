@@ -4,14 +4,14 @@ const Header = () => {
   return (
     <header class="flex justify-between items-center px-2 py-1 m-1 border-b">
       <div>
-        <A href="./">
+        <A href={import.meta.env.BASE_URL}>
           <h1 class="inline-block text-xl">ウデマエシミュレーター</h1>
         </A>
         <nav class="inline-block mx-4">
-          <A href="./simple" class="mx-2">
+          <A href={`${import.meta.env.BASE_URL}simple`} class="mx-2">
             シンプルモード
           </A>
-          <A href="./advance" class="mx-2">
+          <A href={`${import.meta.env.BASE_URL}advance`} class="mx-2">
             アドバンスモード
           </A>
         </nav>
