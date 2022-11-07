@@ -12,9 +12,11 @@ const App: Component = () => {
       <main class="flex justify-center flex-grow">
         <div class="w-full max-w-screen-xl">
           <Routes>
-            <Route path="/simple" component={Simple} />
-            <Route path="/" component={Simple} />
-            <Route path="/advance" component={Advance} />
+            <Route path={import.meta.env.BASE_URL}>
+              <Route path="/simple" component={Simple} />
+              <Route path="/" component={Simple} />
+              <Route path="/advance" component={Advance} />
+            </Route>
           </Routes>
         </div>
       </main>
